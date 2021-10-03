@@ -23,50 +23,51 @@ function renderLicenseLink(license) {
   }[license]
 }
 
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {
-//   if(license != "Unlicense"){
-//     return `This repository is under the [${license}](${renderLicenseLink(license)}).`
-// }
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+  if(license != "Unlicense"){
+    return `This repository is under the [${license}](${renderLicenseLink(license)}).`
+}
+}
 
-// // TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
 
-//   return `# ${data.title}
+  return `# ${data.title}
 
-//   ${renderLicenseBadge(data.license)}
-//     ## Description
-//    ${data.description}
+  ${renderLicenseBadge(data.license)}
+    ## Description
+   ${data.description}
 
-//   ## Table of Contents
-//   * [Installation](#installation)
-//   * [Usage](#usage)
-//   * [Contribution](#contribution)
-//   * [License](#license)
-//   * [Testing](#testing)
-//   * [Question](#questions)
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contribution](#contribution)
+  * [License](#license)
+  * [Testing](#testing)
+  * [Question](#questions)
   
-//   ## Installation
-//   ${data.installation}
+  ## Installation
+  ${data.installation}
+  ## Usage
+  ${data.usage}
   
-//   ## Usage
-//   ${data.usage}
+  ## License
+  ${renderLicenseSection(data.license)}
   
-//   ## License
-//   ${renderLicenseSection(data.license)}
+  ## Contribution
+  ${data.contribution}
   
-//   ## Contribution
-//   ${data.contribution}
+  ## Testing
+  ${data.testing}
+  ## Questions
   
-//   ## Testing
-//   ${data.testing}
-//   ## Questions
-  
-//   Please contact me at [${data.email}](mailto:${data.email}).  [${data.github}](https://github.com/${data.github}).
+  Please contact me at [${data.email}](mailto:${data.email}).  [${data.github}](https://github.com/${data.github}).
   
 
-// `;
-// }
+`;
+}
 
-// module.exports = generateMarkdown:
+
+module.exports = generateMarkdown;
